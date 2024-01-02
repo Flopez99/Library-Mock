@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller5">
+   <children>
+      <AnchorPane prefHeight="453.0" prefWidth="694.0">
+         <children>
+            <TabPane prefHeight="453.6" prefWidth="694.4" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Account Information">
+                     <content>
+                        <AnchorPane prefHeight="337.0" prefWidth="694.0">
+                           <children>
+                              <Button layoutX="364.0" layoutY="370.0" mnemonicParsing="false" onAction="#updateAccount" prefHeight="34.0" prefWidth="86.0" text="Update Info" />
+                              <Label layoutX="479.0" layoutY="62.0" mouseTransparent="true" opacity="0.51" prefHeight="20.0" prefWidth="116.0" text="User name must contain ()">
+                                 <font>
+                                    <Font name="Cambria" size="10.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="472.0" layoutY="127.0" mouseTransparent="true" opacity="0.51" prefHeight="20.0" prefWidth="116.0" text="Password must contain ()">
+                                 <font>
+                                    <Font name="Cambria" size="10.0" />
+                                 </font>
+                              </Label>
+                              <VBox layoutX="136.0" layoutY="62.0" prefHeight="206.0" prefWidth="123.0" spacing="10.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="76.0" text="First Name: ">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="firstName1" prefHeight="20.0" prefWidth="137.0" />
+                                    <Label prefHeight="20.0" prefWidth="76.0" text="Last Name:">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="lastName1" prefHeight="26.0" prefWidth="138.0" />
+                                    <Label prefHeight="18.0" prefWidth="93.0" text="Phone Number">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="phoneNumber1" prefHeight="26.0" prefWidth="138.0" />
+                                    <Label prefHeight="18.0" prefWidth="76.0" text="Address:">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="address1" prefHeight="20.0" prefWidth="137.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="407.0" layoutY="62.0" prefHeight="200.0" prefWidth="123.0" spacing="10.0">
+                                 <children>
+                                    <Label prefHeight="20.0" prefWidth="76.0" text="User Name:">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="userName1" prefHeight="20.0" prefWidth="137.0" />
+                                    <Label prefHeight="20.0" prefWidth="76.0" text="Password:">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <PasswordField fx:id="password1" prefHeight="26.0" prefWidth="138.0" />
+                                    <Label prefHeight="18.0" prefWidth="94.0" text="Profile Picture: ">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="profilePicture1" fitHeight="77.0" fitWidth="92.0" pickOnBounds="true" VBox.vgrow="NEVER">
+                                       <image>
+                                          <Image url="@../../../../../../../Pictures/Final_Project/defaultUser.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Button mnemonicParsing="false" onAction="#selectPicture" text="Add Picture" textAlignment="RIGHT" />
+                                 </children>
+                              </VBox>
+                              <Button layoutX="267.0" layoutY="370.0" mnemonicParsing="false" onAction="#changeSceneLogIn" prefHeight="34.0" prefWidth="80.0" text="Go Back" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                  <Tab text="Borrowing History">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="bookSelection2" layoutX="14.0" layoutY="133.0" prefHeight="290.0" prefWidth="694.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="133.0">
+                                 <columns>
+                                    <TableColumn fx:id="isbnColumn2" prefWidth="155.999966442585" text="ISBN" />
+                                    <TableColumn fx:id="titleColumn2" prefWidth="148.80006408691406" resizable="false" text="TITLE" />
+                                    <TableColumn fx:id="authorColumn2" prefWidth="159.20001220703125" text="AUTHOR(S)" />
+                                    <TableColumn fx:id="dueDateColumn2" prefWidth="208.79996337890623" resizable="false" sortType="DESCENDING" text="DUE DATE" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Label layoutX="282.0" layoutY="35.0" prefHeight="49.0" prefWidth="130.0" text="Book Selected: ">
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="321.0" layoutY="85.0" mnemonicParsing="false" text="Button" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Books In Posession">
+                     <content>
+                        <SplitPane dividerPositions="0.004320276497695853" prefHeight="160.0" prefWidth="200.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView fx:id="bookSelection11" layoutY="120.0" prefHeight="303.0" prefWidth="689.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+                                       <columns>
+                                          <TableColumn fx:id="isbnColumn11" prefWidth="119.19995123147964" text="ISBN" />
+                                          <TableColumn fx:id="titleColumn11" prefWidth="130.40003967285156" resizable="false" text="TITLE" />
+                                          <TableColumn fx:id="authorColumn11" prefWidth="114.40005493164062" text="AUTHOR(S)" />
+                                          <TableColumn fx:id="dueDateColumn11" prefWidth="233.60001831054683" resizable="false" sortType="DESCENDING" text="DUE DATE" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Label fx:id="selectedBook" layoutX="292.0" prefHeight="49.0" prefWidth="130.0" text="Book Returns: ">
+                                       <font>
+                                          <Font name="Cambria" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="303.0" layoutY="37.0" mnemonicParsing="false" onAction="#returnBookSelected" text="Return Book" />
+                                    <Label fx:id="selectedBook" layoutX="194.0" layoutY="77.0" prefHeight="50.0" prefWidth="429.0">
+                                       <font>
+                                          <Font name="Cambria" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
